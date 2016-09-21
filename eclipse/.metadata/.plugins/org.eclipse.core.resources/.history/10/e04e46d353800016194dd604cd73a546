@@ -1,0 +1,18 @@
+package dym.swingplatformer;
+
+import javax.swing.JFrame;
+
+public class Game extends JFrame {
+	Display d;
+	public Game() {
+		this.setSize(640,480);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		this.setContentPane(d);
+	}
+	
+	public static void main(String args[]) {
+		new Game();
+	}
+}

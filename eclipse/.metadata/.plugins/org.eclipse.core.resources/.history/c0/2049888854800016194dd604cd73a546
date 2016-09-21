@@ -1,0 +1,14 @@
+package dym.swingplatformer;
+
+import java.awt.Graphics;
+import java.util.ArrayList;
+
+public abstract class Scene {
+	public ArrayList<Object> objects;
+	public void drawme(Graphics g) {
+		
+	}
+	public void logic() {
+		
+	}
+}
