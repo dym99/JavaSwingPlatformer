@@ -1,0 +1,12 @@
+package dym.swingplatformer;
+
+import java.util.ArrayList;
+
+import dym.swingplatformer.entities.Entity;
+
+public class Scene {
+	public ArrayList<Entity> ent;
+	public Scene(ArrayList<Entity> entities) {
+		ent = entities;
+	}
+}

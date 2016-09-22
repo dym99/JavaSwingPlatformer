@@ -1,0 +1,23 @@
+package dym.swingplatformer.entities;
+
+import java.awt.Graphics;
+
+import dym.swingplatformer.physics.Rect;
+
+public class Entity {
+	public Entity(Rect bbox, Rect hbox) {
+		
+	}
+	public void update() {
+		
+	}
+	public void drawme(Graphics g) {
+		
+	}
+	public Rect getBBox() {
+		return bbox;
+	}
+	public Rect getHBox() {
+		return hbox;
+	}
+}

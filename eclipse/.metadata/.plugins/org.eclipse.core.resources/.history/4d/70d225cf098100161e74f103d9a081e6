@@ -1,0 +1,13 @@
+package dym.swingplatformer;
+
+import java.util.ArrayList;
+
+import dym.swingplatformer.entities.Entity;
+
+public class Scene1 extends Scene {
+
+	public Scene1() {
+		super(new ArrayList<Entities>().ad));
+	}
+
+}

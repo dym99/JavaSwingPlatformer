@@ -1,0 +1,54 @@
+package dym.swingplatformer;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
+
+public class Input implements KeyListener, MouseListener{
+	public static ArrayList<Integer> keysdown;
+
+	
+
+	@Override
+	public void keyTyped(KeyEvent e) {}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if (!keysdown.contains(e.getKeyCode())) {
+			keysdown.add(e.getKeyCode());
+		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		if (keysdown.contains(e.getKeyCode())) {
+			keysdown.remove((Object)e.getKeyCode());
+		}
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		
+	}
+	
+}

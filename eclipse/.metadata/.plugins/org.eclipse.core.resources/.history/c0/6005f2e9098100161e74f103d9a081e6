@@ -1,0 +1,7 @@
+package dym.swingplatformer;
+
+import java.util.HashMap;
+
+public class SceneManager {
+	public static HashMap<String, Scene> scenes = new HashMap<String, Scene>();
+}

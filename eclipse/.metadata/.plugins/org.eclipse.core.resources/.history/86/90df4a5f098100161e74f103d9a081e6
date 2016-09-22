@@ -1,0 +1,9 @@
+package dym.swingplatformer;
+
+import java.util.ArrayList;
+
+public class Scene {
+	public Scene(ArrayList<Entities> entities) {
+		
+	}
+}

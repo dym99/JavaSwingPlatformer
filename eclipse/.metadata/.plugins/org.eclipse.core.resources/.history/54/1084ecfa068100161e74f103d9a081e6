@@ -1,0 +1,21 @@
+package dym.swingplatformer.entities;
+
+import java.awt.Graphics;
+
+import dym.swingplatformer.physics.Rect;
+
+public class Player extends Entity{
+
+	public Player(Rect bbox, Rect hbox) {
+		super(bbox, hbox);
+	}
+	@Override
+	public void update() {
+		
+	}
+	@Override
+	public void drawme(Graphics g) {
+		g.fillRect(getBBox().x, getBBox().y, getBBox().w, getBBox().h);
+	}
+
+}

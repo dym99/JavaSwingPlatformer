@@ -1,0 +1,35 @@
+package dym.swingplatformer.entities;
+
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import dym.swingplatformer.Input;
+import dym.swingplatformer.physics.Rect;
+
+public class Player extends Entity{
+
+	public Player(Rect bbox, Rect hbox) {
+		super(bbox, hbox);
+	}
+	@Override
+	public void update() {
+		if (Input.keysDown.contains(KeyEvent.VK_LEFT)) {
+			
+		}
+		if (Input.keysDown.contains(KeyEvent.VK_RIGHT)) {
+		
+		}
+		if (Input.keysDown.contains(KeyEvent.VK_UP)) {
+		
+		}
+		if (Input.keysDown.contains(KeyEvent.VK_DOWN)) {
+		
+		}
+	}
+	@Override
+	public void drawme(Graphics g) {
+		g.fillRect((int)(getBBox().x+0.5), (int)(getBBox().y+0.5), (int)(getBBox().w+0.5), (int)(getBBox().h+0.5));
+	}
+
+}

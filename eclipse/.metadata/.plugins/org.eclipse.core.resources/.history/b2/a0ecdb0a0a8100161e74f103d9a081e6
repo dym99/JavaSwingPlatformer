@@ -1,0 +1,36 @@
+package dym.swingplatformer;
+
+import javax.swing.JFrame;
+
+import dym.swingplatformer.entities.Player;
+import dym.swingplatformer.physics.Rect;
+public class Game extends JFrame {
+	private static final long serialVersionUID = 665457190433165744L;
+	private static Display d;
+	private static Player player;
+	public Game() {
+		super("Game");
+		Input.init();
+		this.setSize(640,480);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		
+		d = new Display();
+		player = new Player(new Rect(320-16,240-16,32,32));
+		
+		this.setContentPane(d);
+	}
+	
+	public static void main(String args[]) {
+		new Game();
+	}
+	public static void loop() {
+		try {
+			player.update();
+			d.repaint();
+			Thread.sleep(10);
+		} catch (InterruptedException e) 
+		{e.printStackTrace();}
+	}
+}
