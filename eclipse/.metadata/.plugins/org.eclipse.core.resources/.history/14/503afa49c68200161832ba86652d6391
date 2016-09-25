@@ -38,7 +38,7 @@ public class Game extends JFrame {
 			player.update();
 			d.repaint();
 			System.out.println("Keys: "+Input.keysDown);
-			Thread.sleep(15);
+			Thread.sleep(10);
 		} catch (InterruptedException e) 
 		{e.printStackTrace();}
 	}

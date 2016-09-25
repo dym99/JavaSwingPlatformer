@@ -15,8 +15,8 @@ public class Rect {
 		this.h = h;
 	}
 	public boolean collideRect(Rect rect) {
-		if (this.x<=rect.x+rect.w&&this.x+this.w>=rect.x) {
-			if (this.y<=rect.y+rect.h&&this.y+this.h>=rect.y) {
+		if (this.x>=rect.x+rect.w&&this.x+this.w<=rect.x) {
+			if (this.y>=rect.y+rect.h&&this.y+this.h<=rect.y) {
 				return true;
 			}
 		}

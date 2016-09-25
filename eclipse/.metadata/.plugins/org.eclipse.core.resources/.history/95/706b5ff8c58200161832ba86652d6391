@@ -27,12 +27,6 @@ public abstract class Entity {
 		hbox.x+=mov.x;
 		hbox.y+=mov.y;
 	}
-	public void setPos(Vector2 mov) {
-		bbox.x=mov.x;
-		bbox.y=mov.y;
-		hbox.x=mov.x;
-		hbox.y=mov.y;
-	}
 	public Rect getBBox() {
 		return bbox;
 	}

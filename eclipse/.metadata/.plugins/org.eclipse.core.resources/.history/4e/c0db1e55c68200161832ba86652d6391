@@ -28,7 +28,6 @@ public class Player extends Entity{
 				this.yvel = 0;
 			this.setPos(new Vector2(getHBox().x,480-32));
 		}
-		ground = getHBox().collideRect(new Rect(0,480-2,640,32));
 		//
 		if (Input.keysDown.contains(KeyEvent.VK_LEFT)) {
 			move(new Vector2(-2,0));
@@ -42,8 +41,7 @@ public class Player extends Entity{
 		move(new Vector2(0,yvel));
 	}
 	public void jump() {
-		if (ground)
-			yvel = -6;	
+		yvel = -6;
 	}
 	@Override
 	public void drawme(Graphics g) {

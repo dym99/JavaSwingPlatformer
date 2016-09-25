@@ -26,7 +26,6 @@ public class Game extends JFrame {
 		SceneManager.ent.add(player);
 		this.setContentPane(d);
 		this.addKeyListener(i);
-		pack();
 		while (true) loop();
 	}
 	
@@ -38,7 +37,7 @@ public class Game extends JFrame {
 			player.update();
 			d.repaint();
 			System.out.println("Keys: "+Input.keysDown);
-			Thread.sleep(15);
+			Thread.sleep(10);
 		} catch (InterruptedException e) 
 		{e.printStackTrace();}
 	}
