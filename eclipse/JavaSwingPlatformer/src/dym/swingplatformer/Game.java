@@ -1,8 +1,14 @@
 package dym.swingplatformer;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.IIOException;
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import dym.swingplatformer.entities.Player;
+import dym.swingplatformer.entities.player.Character1;
+import dym.swingplatformer.entities.player.Player;
 import dym.swingplatformer.physics.Rect;
 public class Game extends JFrame {
 	private static final long serialVersionUID = 665457190433165744L;
@@ -12,9 +18,16 @@ public class Game extends JFrame {
 
 	public static Game g;
 	
+	public static BufferedImage testIsland;
+	
 	public Game() {
 		super("Game");
-		this.setSize(640,480);
+		try {
+			testIsland = ImageIO.read(new File("res/testisland.png"));
+		} catch (Exception e) {
+			
+		}
+		this.setSize(1280,720);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -22,7 +35,7 @@ public class Game extends JFrame {
 		this.addKeyListener(i);
 		i = new Input();
 		d = new Display();
-		player = new Player(new Rect(320-16,240-16,32,32));
+		player = new Character1(new Rect((1280/2)-16,(720/2)-16,32,32));
 		SceneManager.ent.add(player);
 		this.setContentPane(d);
 		this.addKeyListener(i);
