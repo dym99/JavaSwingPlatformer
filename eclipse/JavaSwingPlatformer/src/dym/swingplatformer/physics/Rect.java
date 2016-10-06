@@ -22,4 +22,16 @@ public class Rect {
 		}
 		return false;
 	}
+	public Vector2 getBottom() {
+		return new Vector2(x+(w/2),y+h);
+	}
+	public Vector2 getTop() {
+		return new Vector2(x+(w/2),y);
+	}
+	public Vector2 getLeft() {
+		return new Vector2(x,y+(h/2));
+	}
+	public Vector2 getRight() {
+		return new Vector2(x+w,y+(h/2));
+	}
 }
